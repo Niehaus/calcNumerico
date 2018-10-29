@@ -27,10 +27,7 @@ x = substituicao.retrosub(b, A)
 gauss_tempo_final = time.time()
 
 print ('\nResultado para Eliminação de Gauss:', x)
-#print ('x1 =', x[0])
-#print ('x2 =', x[1])
-#print ('x3 =', x[2])
-#print(x)
+
 
 chute_inicial = [0,0,0,0]
 iteracoes = 4

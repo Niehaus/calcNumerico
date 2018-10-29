@@ -37,8 +37,9 @@ print("GTy =\n",GTy)
 alpha = np.linalg.solve(GTG,GTy)
 #print ('\nAlpha por eliiminação de Gauss', alpha)
 #Polinomio gerado
-print(f'\nPolinomio: P(x) = {round(alpha[0],2)} + {round(alpha[1],2)}x + {round(alpha[2],2)}x²')
+print(f'\nPolinomio: P(x) = {round(alpha[0],2)} + {round(alpha[1],2)}x1 + {round(alpha[2],2)}x2\n')
 for i in range(n):
-    resultado = round(alpha[0],2) + round(alpha[1],2)*A[i][1] + round(alpha[2],2)*((A[i][1])**2)
-    print(f'P({A[i][1]}) =  {round(alpha[0],2)} + {round(alpha[1],2)*A[i][1]} + {round(alpha[2],2)*((A[i][1])**2)} = {resultado}')
-    print(f'Diferença = {np.sqrt(((resultado - b[i]) ** 2).mean())}\n' )
+    resultado = round(alpha[0],2) + round(alpha[1],2)*A[i][1] + round(alpha[2],2)*A[i][2]
+    print(f'P(x) = {round(alpha[0],2)} + {round(alpha[1],2)}x{A[i][1]} + {round(alpha[2],2)}x{A[i][2]}')
+    print(f'P(x) =  {round(alpha[0],2)} + {round(alpha[1],2)*A[i][1]} + {round(alpha[2],2)*(A[i][2])} = {resultado}')
+    print(f'Diferença = {np.sqrt(((resultado - b[i]) ** 2).mean())}\n')
